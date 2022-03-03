@@ -152,7 +152,7 @@ Forward kinematics using POE"""
 end
 
 """`fkineLPOE(Tn0,xi,q)` Forward kinematics using LPOE"""
-@views function fkineLPOE(Tn0::AbstractArray{Ty},xi::AbstractMatrix{Ty},q::AbstractVector{Ty})::Matrix{Ty} where Ty
+@views function fkineLPOE(Tn0::AbstractArray{Ty},xi::AbstractMatrix{Ty},q::AbstractMatrix{Ty})::Matrix{Ty} where Ty
     T = Matrix{Ty}(I4)
     n = size(xi,2)-1
     for j = 1:n
